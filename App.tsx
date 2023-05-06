@@ -3,7 +3,6 @@ import moment from "moment";
 import { useEffect, useState } from "react";
 import { StyleSheet, Text, View, Vibration, Button } from "react-native";
 import CountDown from "react-native-countdown-component";
-import DateTimePicker from "@react-native-community/datetimepicker";
 import RNDateTimePicker from "@react-native-community/datetimepicker";
 
 export default function App() {
@@ -46,6 +45,7 @@ export default function App() {
 			/>
 			{isCountdownOpen && (
 				<RNDateTimePicker
+					style={{ paddingBottom: 16 }}
 					mode="time"
 					value={expDate.toDate()}
 					onChange={(value) => {
@@ -69,5 +69,6 @@ const styles = StyleSheet.create({
 	},
 	countDownHeader: {
 		fontSize: 32,
+		paddingBottom: 16,
 	},
 });
